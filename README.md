@@ -18,7 +18,7 @@ Descripción del proyecto:
 En primer lugar recopilo y estandarizo la solicitud recibida por el gerente de ventas y defino exactamente la información que necesita cada personal dentro del área. 
 Luego, en base a la solicitud que se hizo desde la empresa, definí las historias de usuarios para lograr un marco bien definido y así cumplir con la entrega y garantizar que los criterios de aceptación se mantengan durante todo el proyecto.
 
-![](/imagen/REQUERIMIENTOS2.jpg)
+![](/imagen/REQUERIMIENTOS3.jpg)
 
 # Paso 2
 # Paso 3
