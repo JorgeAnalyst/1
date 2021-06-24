@@ -21,6 +21,7 @@ Luego, en base a la solicitud que se hizo desde la empresa, definí las historia
 
 ![](/imagen/REQUERIMIENTOS3.jpg)
 
+
 # Paso 2: Limpieza y transformación de datos (SQL)
 
 Para crear el modelo de datos necesario para realizar análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, importé las tablas mediante SQL.
@@ -29,5 +30,23 @@ Además, armé un presupuesto de ventas en Excel y la conecté en el modelo de d
 
 A continuación se muestran las instrucciones SQL para limpiar y transformar los datos necesarios.
 
-# Paso 3
-# Paso 4
+imagen
+
+
+# Paso 3: Modelamiento de datos
+
+A continuación, se muestra una captura de pantalla del modelo de datos después de que las tablas fuesen limpiadas y preparadas. Se implementaron en Power BI.
+
+Este modelo de datos también muestra cómo se ha conectado FACT_Budget a FACT_InternetSales y otras tablas DIM necesarias.
+
+imagen
+
+
+# Paso 4: Dashboard de ventas
+Finalmente, en la siguiente imagen evidencio el resultado final: 
+
+Un dashboard de ventas completo con una página que funciona como panel y una descripción general, con otras dos páginas enfocadas en combinar tablas para obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos.
+
+imagen
+
+
