@@ -16,10 +16,18 @@ Descripción del proyecto:
 # Paso 1: Requerimientos del negocio
 
 En primer lugar recopilo y estandarizo la solicitud recibida por el gerente de ventas y defino exactamente la información que necesita cada personal dentro del área. 
+
 Luego, en base a la solicitud que se hizo desde la empresa, definí las historias de usuarios para lograr un marco bien definido y así cumplir con la entrega y garantizar que los criterios de aceptación se mantengan durante todo el proyecto.
 
 ![](/imagen/REQUERIMIENTOS3.jpg)
 
-# Paso 2
+# Paso 2: Limpieza y transformación de datos (SQL)
+
+Para crear el modelo de datos necesario para realizar análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, importé las tablas mediante SQL.
+
+Además, armé un presupuesto de ventas en Excel y la conecté en el modelo de datos.
+
+A continuación se muestran las instrucciones SQL para limpiar y transformar los datos necesarios.
+
 # Paso 3
 # Paso 4
