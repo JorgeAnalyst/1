@@ -7,8 +7,21 @@ Descripción del proyecto:
 - Limpié y preparé los datos necesarios.
 - Finalmente, confeccioné el dashboard de ventas en Power BI con visualizaciones claras para mostrar las ventas a lo largo del tiempo, por clientes y por productos.
 
+# Recursos utilizados
+- Base de datos: https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak
+- Power BI Desktop 
+- Microsoft SQL Server Management Studio
+
+
 # Paso 1
+# Requerimientos del negocio
+
+En primer lugar recopilo y estandarizo la solicitud recibida por el gerente de ventas y defino exactamente la información que necesita cada personal dentro del área. 
+Luego, en base a la solicitud que se hizo desde la empresa, definí las historias de usuarios para lograr un marco bien definido y así cumplir con la entrega y garantizar que los criterios de aceptación se mantengan durante todo el proyecto.
+
+
+
+
 # Paso 2
 # Paso 3
 # Paso 4
-# Paso 5
