@@ -7,3 +7,8 @@ Descripción del proyecto:
 - Limpié y preparé los datos necesarios.
 - Finalmente, confeccioné el dashboard de ventas en Power BI con visualizaciones claras para mostrar las ventas a lo largo del tiempo, por clientes y por productos.
 
+# Paso 1
+# Paso 2
+# Paso 3
+# Paso 4
+# Paso 5
