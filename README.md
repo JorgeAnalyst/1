@@ -19,8 +19,6 @@ En primer lugar recopilo y estandarizo la solicitud recibida por el gerente de v
 
 Luego, en base a la solicitud que se hizo desde la empresa, definí las historias de usuarios para lograr un marco bien definido y así cumplir con la entrega y garantizar que los criterios de aceptación se mantengan durante todo el proyecto.
 
-![](/imagen/REQUERIMIENTOS3.jpg)
-
 | N#             | Cargo                       | Requerimiento                                                      | Objetivo                                                              | Criterio de Aceptación                                      |
 |     :---:      |     :---:                   |     :---:                                                          |     :---:                                                             |     :---:                                                   |
 | 1              | Gerente de ventas           | Dashboard completo de ventas                                       | Hacer un mejor seguimiento de qué clientes y productos se venden mejor| Dashboard en Power BI que actualice los datos todos los días|
