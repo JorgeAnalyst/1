@@ -75,7 +75,7 @@ SELECT
   [WeekNumberOfYear] AS NrSemana, 
   --,[EnglishMonthName]
   [SpanishMonthName] AS Mes, 
-  LEFT([SpanishMonthName], 3) as MesCorto, 
+LEFT([SpanishMonthName], 3) as MesCorto, --> Acorté las tres primeras letras el nombre del mes para que al visualizarse se vea más representativo y limpio
   --,[FrenchMonthName]  
   [MonthNumberOfYear] AS NrMes, 
   --,[CalendarQuarter]
@@ -87,7 +87,7 @@ SELECT
 FROM 
   [AdventureWorksDW2019].[dbo].[DimDate] 
 WHERE 
-  CalendarYear >= 2019
+  CalendarYear >= 2019 --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
 
 ```
 ## CLIENTES
@@ -102,15 +102,12 @@ SELECT
   c.firstname AS Nombre, 
   --,[MiddleName]
   c.lastname AS Apellido, 
-  c.firstname + ' ' + lastname AS [NombreCompleto], 
-
-  -- Concatené Nombre y Apellido --
-
+  c.firstname + ' ' + lastname AS [NombreCompleto], --> Concatené Nombre y Apellido
   --,[NameStyle]
   --,[BirthDate]
   --,[MaritalStatus]
   --,[Suffix]
-  CASE c.gender WHEN 'M' THEN 'Hombre' WHEN 'F' THEN 'Mujer' END AS Género, 
+CASE c.gender WHEN 'M' THEN 'Hombre' WHEN 'F' THEN 'Mujer' END AS Género, 
   --,[Gender]
   --,[EmailAddress]
   --,[YearlyIncome]
@@ -129,17 +126,13 @@ SELECT
   --,[Phone]
   c.DateFirstPurchase AS PrimeraCompra, 
   --,[CommuteDistance]
-  g.city AS Ciudad 
-
-  -- Vinculé la Ciudad del cliente con la tabla DimGeography --
-
+  g.city AS Ciudad  --> Vinculé la Ciudad del cliente con la tabla DimGeography
 FROM 
   [AdventureWorksDW2019].[dbo].[DimCustomer] as c 
   LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
 ORDER BY 
-  CustomerKey ASC 
-  
-  -- Ordené la lista de forma ascendente --
+  CustomerKey ASC  --> Ordené la lista de forma ascendente
+
 
 ```
 
