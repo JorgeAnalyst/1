@@ -37,7 +37,7 @@ A continuación se muestra el resultado final de las queries en SQL:
 ## DIM_CALENDAR
 
 ```
---Tabla de dimensiones limpia (DIM_DateTable)-- 
+--Tabla de calendario limpia (DIM_DateTable)-- 
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Fecha, 
