@@ -60,7 +60,8 @@ SELECT TOP (1000) [DateKey]
 ```
 
 ### Después (Datos filtrados, limpiados, y ordenados)
-## FECHA
+
+## FECHA (DIM)
 
 ```
 -- Resultado tabla de Fecha limpiada -- 
@@ -94,7 +95,7 @@ WHERE
 Las siguientes tablas quedaron finalmente configuradas de la siguiente forma:
 
 
-## CLIENTES
+## CLIENTES (DIM)
 
 ```
 -- Resultado tabla de Clientes limpiada --
@@ -140,7 +141,7 @@ ORDER BY
 
 ```
 
-## PRODUCTO
+## PRODUCTO (DIM)
 ```
 -- Resultado tabla de Producto limpiada --
 SELECT 
@@ -190,6 +191,45 @@ order by
   p.ProductKey asc
 
 ```
+
+## VENTAS POR INTERNET (FACT)
+```
+-- Resultado tabla de Ventas por Internet limpiada --
+SELECT 
+  [ProductKey], 
+  [OrderDateKey], 
+  [DueDateKey], 
+  [ShipDateKey], 
+  [CustomerKey], 
+  --,[PromotionKey]
+  --,[CurrencyKey]
+  --,[SalesTerritoryKey]
+  [SalesOrderNumber], 
+  --,[SalesOrderLineNumber]
+  --,[RevisionNumber]
+  --,[OrderQuantity]
+  [UnitPrice], 
+  --,[ExtendedAmount]
+  --,[UnitPriceDiscountPct]
+  --,[DiscountAmount]
+  --,[ProductStandardCost]
+  --,[TotalProductCost]
+  [SalesAmount] --,[TaxAmt]
+  --,[Freight]
+  --,[CarrierTrackingNumber]
+  --,[CustomerPONumber]
+  --,[OrderDate]
+  --,[DueDate]
+  --,[ShipDate]
+FROM 
+  [AdventureWorksDW2019].[dbo].[FactInternetSales] 
+WHERE 
+  LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) -2 --> Se asegura que siempre se obtenga información de los últimos dos años a contar del año actual
+ORDER BY 
+  OrderDateKey ASC
+
+```
+
 
 
 # Paso 3: Modelamiento de datos
