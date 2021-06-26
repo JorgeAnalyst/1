@@ -14,7 +14,8 @@
 - Microsoft SQL Server Management Studio
 
 
-# Paso 1: Requerimientos del negocio
+<h2 align="center">Paso 1: Requerimientos del negocio</h2>
+
 
 En primer lugar recopilo y estandarizo la solicitud recibida por el gerente de ventas y defino exactamente la información que necesita cada personal dentro del área. 
 
@@ -28,8 +29,8 @@ Luego, en base a la solicitud que se hizo desde la empresa, definí las historia
 | 4              | Ejecutivo de ventas 3       | Descripción detalllada de ventas por internet                      | Hacer seguimiento de las ventas y presupuesto                         | Dashboard en Power BI con gráficos, KPI's y presupuesto |
 
 
-# Paso 2: Limpieza y transformación de datos (SQL)
 
+<h2 align="center">Paso 2: Limpieza y transformación de datos en SQL</h2>
 Para realizar el análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, primero importé las tablas mediante SQL las cuales limpié, ordené, y transforme en formato.csv, esto con la finalidad de adquirir sólo los datos que efectivamente necesito para cumplir el objetivo de una forma limpia y ordenada.
 
 A continuación se muestra el resultado final (antes y después del procedimiento) de las queries en SQL: 
@@ -233,8 +234,8 @@ ORDER BY
 
 
 
-# Paso 3: Modelamiento de datos
 
+<h2 align="center">Paso 3: Modelamiento de datos</h2>
 A continuación, se muestra una captura de pantalla del modelo de datos después de que las tablas fuesen limpiadas y preparadas. Se implementaron en Power BI.
 
 Este modelo de datos también muestra cómo se ha conectado FACT_Budget a FACT_InternetSales y otras tablas DIM necesarias.
@@ -242,7 +243,8 @@ Este modelo de datos también muestra cómo se ha conectado FACT_Budget a FACT_I
 imagen
 
 
-# Paso 4: Dashboard de ventas
+
+<h2 align="center">Paso 4: Dashboard de ventas</h2>
 Finalmente, en la siguiente imagen evidencio el resultado final: 
 
 Un dashboard de ventas completo con una página que funciona como panel y una descripción general, con otras dos páginas enfocadas en combinar tablas para obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos.
