@@ -63,7 +63,7 @@ SELECT TOP (1000) [DateKey]
 ## FECHA
 
 ```
--- Tabla de Fecha limpiada -- 
+-- Resultado tabla de Fecha limpiada -- 
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Fecha, 
@@ -97,7 +97,7 @@ Las siguientes tablas quedaron finalmente configuradas de la siguiente forma:
 ## CLIENTES
 
 ```
--- Tabla de Clientes limpada --
+-- Resultado tabla de Clientes limpiada --
 SELECT 
   c.customerkey AS CustomerKey, 
   --,[GeographyKey]
@@ -142,7 +142,7 @@ ORDER BY
 
 ## PRODUCTO
 ```
--- Tabla de Producto limpiada --
+-- Resultado tabla de Producto limpiada --
 SELECT 
   p.[ProductKey], 
   p.[ProductAlternateKey] AS Código, 
