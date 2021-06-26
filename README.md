@@ -33,7 +33,7 @@ Para realizar el análisis y satisfacer las necesidades comerciales definidas en
 
 A continuación se muestra el resultado final (antes y después del procedimiento) de las queries en SQL: 
 
-## ANTES
+## ANTES (Sin modificar)
 
 ```
 /****** Script for SelectTopNRows command from SSMS  ******/
