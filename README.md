@@ -62,7 +62,7 @@ SELECT TOP (1000) [DateKey]
 ## DESPUÉS (Datos filtrados, limpiados, y ordenados)
 
 ```
---Tabla de calendario limpia (DIM_DateTable)-- 
+--Tabla de calendario limpiada (DIM_DateTable)-- 
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Fecha, 
