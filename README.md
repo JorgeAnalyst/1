@@ -1,4 +1,4 @@
-# Proyecto 1: Reporte de ventas utilizando SQL y Power BI
+# PROYECTO 1: REPORTE DE VENTAS UTILIZANDO SQL Y POWERBI
 
 ## Descripción del proyecto:
 - Utilicé una base de datos preexistente de Microsoft (AdventureWorks Sample Databases)
@@ -61,10 +61,10 @@ SELECT TOP (1000) [DateKey]
 
 ### Después (Datos filtrados, limpiados, y ordenados)
 
-## FECHA (DIM)
+## Fecha
 
 ```
--- Resultado tabla de Fecha limpiada -- 
+-- Resultado tabla DIM Fecha limpiada -- 
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Fecha, 
@@ -95,10 +95,10 @@ WHERE
 Las siguientes tablas quedaron finalmente configuradas de la siguiente forma:
 
 
-## CLIENTES (DIM)
+## Clientes
 
 ```
--- Resultado tabla de Clientes limpiada --
+-- Resultado tabla DIM Clientes limpiada --
 SELECT 
   c.customerkey AS CustomerKey, 
   --,[GeographyKey]
@@ -141,9 +141,9 @@ ORDER BY
 
 ```
 
-## PRODUCTO (DIM)
+## Producto
 ```
--- Resultado tabla de Producto limpiada --
+-- Resultado tabla DIM Producto limpiada --
 SELECT 
   p.[ProductKey], 
   p.[ProductAlternateKey] AS Código, 
@@ -192,9 +192,9 @@ order by
 
 ```
 
-## VENTAS POR INTERNET (FACT)
+## Ventas por Internet 
 ```
--- Resultado tabla de Ventas por Internet limpiada --
+-- Resultado tabla FACT Ventas por Internet limpiada --
 SELECT 
   [ProductKey], 
   [OrderDateKey], 
