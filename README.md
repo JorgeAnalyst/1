@@ -39,31 +39,33 @@ A continuación se muestran las queries generadas en SQL para limpiar y transfor
 ## DIM_CALENDAR
 
 ```
---Cleansed DIM_DATE table
+--Tabla de dimensiones limpia (DIM_DateTable)-- 
 SELECT 
   [DateKey], 
-  [FullDateAlternateKey] AS DATE, 
-  --,[DayNumberOfWeek]
-  [EnglishDayNameOfWeek] AS DAY, 
-  -- ,[SpanishDayNameOfWeek]
-  -- ,[FrenchDayNameOfWeek]
+  [FullDateAlternateKey] AS Fecha, 
+  --,[DayNumberOfWeek] 
+  --,[EnglishDayNameOfWeek]
+  [SpanishDayNameOfWeek] AS Dia, 
+  --,[FrenchDayNameOfWeek]
   --,[DayNumberOfMonth]
-  -- ,[DayNumberOfYear]
-  [WeekNumberOfYear] AS WEEKNO, 
-  [EnglishMonthName] AS MONTH, 
-  LEFT([EnglishMonthName], 3) AS MONTHSHORT, 
-  -- ,[SpanishMonthName]
-  -- ,[FrenchMonthName]
-  [MonthNumberOfYear] AS MONTHNO, 
-  [CalendarQuarter] AS QUARTER, 
-  [CalendarYear] AS YEAR -- ,[CalendarSemester]
+  --,[DayNumberOfYear]
+  [WeekNumberOfYear] AS NrSemana, 
+  --,[EnglishMonthName]
+  [SpanishMonthName] AS Mes, 
+  LEFT([SpanishMonthName], 3) as MesCorto, 
+  --,[FrenchMonthName]  
+  [MonthNumberOfYear] AS NrMes, 
+  --,[CalendarQuarter]
+  [CalendarYear] AS Año, 
+  [CalendarSemester] AS Semestre 
   --,[FiscalQuarter]
-  -- ,[FiscalYear]
-  -- ,[FiscalSemester]
+  --,[FiscalYear]
+  --,[FiscalSemester]
 FROM 
   [AdventureWorksDW2019].[dbo].[DimDate] 
 WHERE 
   CalendarYear >= 2019
+
 ```
 
 ## DIM_CUSTOMER
