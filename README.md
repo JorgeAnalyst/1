@@ -75,7 +75,7 @@ SELECT
   [WeekNumberOfYear] AS NrSemana, 
   --,[EnglishMonthName]
   [SpanishMonthName] AS Mes, 
-LEFT([SpanishMonthName], 3) as MesCorto, --> Acorté las tres primeras letras el nombre del mes para que al visualizarse se vea más representativo y limpio
+LEFT([SpanishMonthName], 3) as MesCorto,  --> Acorté las tres primeras letras el nombre del mes para que al visualizarse se vea más representativo y limpio
   --,[FrenchMonthName]  
   [MonthNumberOfYear] AS NrMes, 
   --,[CalendarQuarter]
@@ -87,7 +87,7 @@ LEFT([SpanishMonthName], 3) as MesCorto, --> Acorté las tres primeras letras el
 FROM 
   [AdventureWorksDW2019].[dbo].[DimDate] 
 WHERE 
-  CalendarYear >= 2019 --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
+  CalendarYear >= 2019  --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
 
 ```
 ## CLIENTES
