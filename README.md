@@ -33,7 +33,7 @@ Para crear el modelo de datos necesario para realizar análisis y satisfacer las
 
 Además, armé un presupuesto de ventas en Excel y la conecté en el modelo de datos.
 
-A continuación se muestran las instrucciones SQL para limpiar y transformar los datos necesarios.
+A continuación se muestran las queries generadas en SQL para limpiar y transformar los datos necesarios.
 
 
 ## DIM_CALENDAR
