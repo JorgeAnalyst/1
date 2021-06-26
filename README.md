@@ -91,7 +91,7 @@ WHERE
   CalendarYear >= 2019  --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
 
 ```
-Las siguientes tablas quedaron finalmente configuradas de esta forma:
+Las siguientes tablas quedaron finalmente configuradas de la siguiente forma:
 
 
 ## CLIENTES
