@@ -59,7 +59,7 @@ SELECT TOP (1000) [DateKey]
   FROM [AdventureWorksDW2019].[dbo].[DimDate]
 ```
 
-## DESPUÉS
+## DESPUÉS (Datos filtrados, limpiados, y ordenados)
 
 ```
 --Tabla de calendario limpia (DIM_DateTable)-- 
