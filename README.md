@@ -66,7 +66,138 @@ WHERE
   CalendarYear >= 2019
 ```
 
-imagen
+## DIM_CUSTOMER
+
+```
+--Cleansed DIM_CUSTOMER table
+SELECT 
+  c.customerkey as Customerkey, 
+  -- ,[GeographyKey]
+  --[CustomerAlternateKey]
+  --,[Title]
+  c.firstname as [First Name], 
+  -- ,[MiddleName]
+  c.lastname as [LastName], 
+  [Firstname] + ' ' + [LastName] AS [Full Name], 
+  -- ,[NameStyle]
+  -- ,[BirthDate]
+  -- ,[MaritalStatus]
+  -- ,[Suffix]
+  CASE c.gender WHEN 'M' THEN 'Male' WHEN 'F' THEN 'Female' END AS Gender, 
+  -- ,[EmailAddress]
+  -- ,[YearlyIncome]
+  -- ,[TotalChildren]
+  -- ,[NumberChildrenAtHome]
+  -- ,[EnglishEducation]
+  --,[SpanishEducation]
+  -- ,[FrenchEducation]
+  -- ,[EnglishOccupation]
+  --  ,[SpanishOccupation]
+  --  ,[FrenchOccupation]
+  --  ,[HouseOwnerFlag]
+  -- ,[NumberCarsOwned]
+  -- ,[AddressLine1]
+  -- ,[AddressLine2]
+  --  ,[Phone]
+  c.datefirstpurchase AS Datefirstpurchase, 
+  --  ,[CommuteDistance]
+  g.city AS [Customer City] 
+FROM 
+  [AdventureWorksDW2019].[dbo].[DimCustomer] AS c 
+  LEFT JOIN [AdventureWorksDW2019].[dbo].[DimGeography] as g on g.geographykey = c.geographykey 
+ORDER BY 
+  CustomerKey ASC
+```
+## DIM_PRODUCT
+
+```
+-- Cleansed DIM_PRODUCT table
+SELECT 
+  p.[ProductKey], 
+  p.ProductAlternateKey AS ProductItemCode, 
+  -- ,[ProductSubcategoryKey]
+  -- ,[WeightUnitMeasureCode]
+  -- ,[SizeUnitMeasureCode]
+  p.[EnglishProductName] AS [Product Name], 
+  ps.EnglishProductSubcategoryName AS [Sub Category], 
+  pc.EnglishProductCategoryName AS [Category Name], 
+  -- ,[SpanishProductName]
+  -- ,[FrenchProductName]
+  -- ,[StandardCost]
+  -- ,[FinishedGoodsFlag]
+  p.[Color] AS [Product Color], 
+  -- ,[SafetyStockLevel]
+  -- ,[ReorderPoint]
+  -- ,[ListPrice]
+  p.[Size] AS [Product Size], 
+  -- ,[SizeRange]
+  -- ,[Weight]
+  -- ,[DaysToManufacture]
+  p.[ProductLine] AS [Product Line], 
+  -- ,[DealerPrice]
+  -- ,[Class]
+  -- ,[Style]
+  p.[ModelName] AS [Product Model Name], 
+  -- ,[LargePhoto]
+  p.[EnglishDescription] AS [Product Description], 
+  -- ,[FrenchDescription]
+  -- ,[ChineseDescription]
+  -- ,[ArabicDescription]
+  -- ,[HebrewDescription]
+  -- ,[ThaiDescription]
+  -- ,[GermanDescription]
+  -- ,[JapaneseDescription]
+  -- ,[TurkishDescription]
+  -- ,[StartDate]
+  -- ,[EndDate]
+  ISNULL (p.status, 'Outdate') AS [Product Status] 
+FROM 
+  [AdventureWorksDW2019].[dbo].[DimProduct] as p 
+  LEFT JOIN dbo.DimProductSubcategory as ps on ps.ProductSubcategoryKey = p.ProductSubcategoryKey 
+  LEFT JOIN dbo.DimProductCategory as pc on ps.ProductCategoryKey = pc.ProductCategoryKey 
+ORDER BY 
+  p.ProductKey ASC
+```
+
+## FACT_SALES
+
+```
+-- Cleansed FACT_SALES table
+SELECT 
+  [ProductKey], 
+  [OrderDateKey], 
+  [DueDateKey], 
+  [ShipDateKey], 
+  [CustomerKey] -- ,[PromotionKey]
+  -- ,[CurrencyKey]
+  -- ,[SalesTerritoryKey]
+  , 
+  [SalesOrderNumber] -- ,[SalesOrderLineNumber]
+  -- ,[RevisionNumber]
+  -- ,[OrderQuantity]
+  -- ,[UnitPrice]
+  -- ,[ExtendedAmount]
+  -- ,[UnitPriceDiscountPct]
+  -- ,[DiscountAmount]
+  -- ,[ProductStandardCost]
+  -- ,[TotalProductCost]
+  , 
+  [SalesAmount] -- ,[TaxAmt]
+  -- ,[Freight]
+  -- ,[CarrierTrackingNumber]
+  -- ,[CustomerPONumber]
+  -- ,[OrderDate]
+  -- ,[DueDate]
+  -- ,[ShipDate]
+FROM 
+  [AdventureWorksDW2019].[dbo].[FactInternetSales] 
+WHERE 
+  LEFT(OrderDateKey, 4) >= YEAR(
+    GETDATE()
+  ) -2 --make sure there is always 2 years gap from the report. 
+ORDER BY 
+  OrderDateKey ASC
+```
 
 
 # Paso 3: Modelamiento de datos
