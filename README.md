@@ -1,4 +1,5 @@
-# PROYECTO 1: REPORTE DE VENTAS UTILIZANDO SQL Y POWERBI
+<h2 align="center">PROYECTO 1: REPORTE DE VENTAS UTILIZANDO SQL Y POWER BI</h2>
+
 
 ## Descripción del proyecto:
 - Utilicé una base de datos preexistente de Microsoft (AdventureWorks Sample Databases)
