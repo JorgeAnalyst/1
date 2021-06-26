@@ -33,8 +33,33 @@ Para realizar el análisis y satisfacer las necesidades comerciales definidas en
 
 A continuación se muestra el resultado final de las queries en SQL: 
 
+## ANTES
 
-## DIM_CALENDAR
+```
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [DateKey]
+      ,[FullDateAlternateKey]
+      ,[DayNumberOfWeek]
+      ,[EnglishDayNameOfWeek]
+      ,[SpanishDayNameOfWeek]
+      ,[FrenchDayNameOfWeek]
+      ,[DayNumberOfMonth]
+      ,[DayNumberOfYear]
+      ,[WeekNumberOfYear]
+      ,[EnglishMonthName]
+      ,[SpanishMonthName]
+      ,[FrenchMonthName]
+      ,[MonthNumberOfYear]
+      ,[CalendarQuarter]
+      ,[CalendarYear]
+      ,[CalendarSemester]
+      ,[FiscalQuarter]
+      ,[FiscalYear]
+      ,[FiscalSemester]
+  FROM [AdventureWorksDW2019].[dbo].[DimDate]
+```
+
+## DESPUÉS
 
 ```
 --Tabla de calendario limpia (DIM_DateTable)-- 
@@ -64,49 +89,6 @@ FROM
 WHERE 
   CalendarYear >= 2019
 
-```
-
-## DIM_CUSTOMER
-
-```
---Cleansed DIM_CUSTOMER table
-SELECT 
-  c.customerkey as Customerkey, 
-  -- ,[GeographyKey]
-  --[CustomerAlternateKey]
-  --,[Title]
-  c.firstname as [First Name], 
-  -- ,[MiddleName]
-  c.lastname as [LastName], 
-  [Firstname] + ' ' + [LastName] AS [Full Name], 
-  -- ,[NameStyle]
-  -- ,[BirthDate]
-  -- ,[MaritalStatus]
-  -- ,[Suffix]
-  CASE c.gender WHEN 'M' THEN 'Male' WHEN 'F' THEN 'Female' END AS Gender, 
-  -- ,[EmailAddress]
-  -- ,[YearlyIncome]
-  -- ,[TotalChildren]
-  -- ,[NumberChildrenAtHome]
-  -- ,[EnglishEducation]
-  --,[SpanishEducation]
-  -- ,[FrenchEducation]
-  -- ,[EnglishOccupation]
-  --  ,[SpanishOccupation]
-  --  ,[FrenchOccupation]
-  --  ,[HouseOwnerFlag]
-  -- ,[NumberCarsOwned]
-  -- ,[AddressLine1]
-  -- ,[AddressLine2]
-  --  ,[Phone]
-  c.datefirstpurchase AS Datefirstpurchase, 
-  --  ,[CommuteDistance]
-  g.city AS [Customer City] 
-FROM 
-  [AdventureWorksDW2019].[dbo].[DimCustomer] AS c 
-  LEFT JOIN [AdventureWorksDW2019].[dbo].[DimGeography] as g on g.geographykey = c.geographykey 
-ORDER BY 
-  CustomerKey ASC
 ```
 ## DIM_PRODUCT
 
