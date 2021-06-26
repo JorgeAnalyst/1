@@ -36,7 +36,7 @@ A continuación se muestra el resultado final (antes y después del procedimient
 ### Antes (Ejemplo sin modificar)
 
 ```
-/****** Script for SelectTopNRows command from SSMS  ******/
+-- Ejemplo --
 SELECT TOP (1000) [DateKey]
       ,[FullDateAlternateKey]
       ,[DayNumberOfWeek]
@@ -63,7 +63,7 @@ SELECT TOP (1000) [DateKey]
 ## FECHA
 
 ```
---Tabla de Calendario limpiada (DIM_DateTable)-- 
+-- Tabla de Fecha limpiada -- 
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Fecha, 
@@ -142,7 +142,7 @@ ORDER BY
 
 ## PRODUCTO
 ```
--->Tabla de Producto limpiada 
+-- Tabla de Producto limpiada --
 SELECT 
   p.[ProductKey], 
   p.[ProductAlternateKey] AS Código, 
