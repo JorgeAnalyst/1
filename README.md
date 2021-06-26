@@ -29,11 +29,9 @@ Luego, en base a la solicitud que se hizo desde la empresa, definí las historia
 
 # Paso 2: Limpieza y transformación de datos (SQL)
 
-Para crear el modelo de datos necesario para realizar análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, importé las tablas mediante SQL.
+Para crear el modelo de datos necesario para realizar análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, importé las tablas mediante SQL, las cuales limpié, transformé, y ordené según los datos que efectivamente necesito para cumplir el objetivo.
 
-Además, armé un presupuesto de ventas en Excel y la conecté en el modelo de datos.
-
-A continuación se muestran las queries generadas en SQL para limpiar y transformar los datos necesarios.
+A continuación se muestra el resultado final de las queries en SQL: 
 
 
 ## DIM_CALENDAR
