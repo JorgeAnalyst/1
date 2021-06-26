@@ -90,55 +90,57 @@ WHERE
   CalendarYear >= 2019
 
 ```
-## DIM_PRODUCT
+## CLIENTES
 
 ```
--- Cleansed DIM_PRODUCT table
+-- Tabla de Clientes limpada --
 SELECT 
-  p.[ProductKey], 
-  p.ProductAlternateKey AS ProductItemCode, 
-  -- ,[ProductSubcategoryKey]
-  -- ,[WeightUnitMeasureCode]
-  -- ,[SizeUnitMeasureCode]
-  p.[EnglishProductName] AS [Product Name], 
-  ps.EnglishProductSubcategoryName AS [Sub Category], 
-  pc.EnglishProductCategoryName AS [Category Name], 
-  -- ,[SpanishProductName]
-  -- ,[FrenchProductName]
-  -- ,[StandardCost]
-  -- ,[FinishedGoodsFlag]
-  p.[Color] AS [Product Color], 
-  -- ,[SafetyStockLevel]
-  -- ,[ReorderPoint]
-  -- ,[ListPrice]
-  p.[Size] AS [Product Size], 
-  -- ,[SizeRange]
-  -- ,[Weight]
-  -- ,[DaysToManufacture]
-  p.[ProductLine] AS [Product Line], 
-  -- ,[DealerPrice]
-  -- ,[Class]
-  -- ,[Style]
-  p.[ModelName] AS [Product Model Name], 
-  -- ,[LargePhoto]
-  p.[EnglishDescription] AS [Product Description], 
-  -- ,[FrenchDescription]
-  -- ,[ChineseDescription]
-  -- ,[ArabicDescription]
-  -- ,[HebrewDescription]
-  -- ,[ThaiDescription]
-  -- ,[GermanDescription]
-  -- ,[JapaneseDescription]
-  -- ,[TurkishDescription]
-  -- ,[StartDate]
-  -- ,[EndDate]
-  ISNULL (p.status, 'Outdate') AS [Product Status] 
+  c.customerkey AS CustomerKey, 
+  --,[GeographyKey]
+  --,[CustomerAlternateKey]
+  --,[Title]
+  c.firstname AS Nombre, 
+  --,[MiddleName]
+  c.lastname AS Apellido, 
+  c.firstname + ' ' + lastname AS [NombreCompleto], 
+
+  -- Concatené Nombre y Apellido --
+
+  --,[NameStyle]
+  --,[BirthDate]
+  --,[MaritalStatus]
+  --,[Suffix]
+  CASE c.gender WHEN 'M' THEN 'Hombre' WHEN 'F' THEN 'Mujer' END AS Género, 
+  --,[Gender]
+  --,[EmailAddress]
+  --,[YearlyIncome]
+  --,[TotalChildren]
+  --,[NumberChildrenAtHome]
+  --,[EnglishEducation]
+  [SpanishEducation] AS Educación, 
+  --,[FrenchEducation]
+  --,[EnglishOccupation]
+  [SpanishOccupation] AS Ocupación, 
+  --,[FrenchOccupation]
+  --,[HouseOwnerFlag]
+  --,[NumberCarsOwned]
+  --,[AddressLine1]
+  --,[AddressLine2]
+  --,[Phone]
+  c.DateFirstPurchase AS PrimeraCompra, 
+  --,[CommuteDistance]
+  g.city AS Ciudad 
+
+  -- Vinculé la Ciudad del cliente con la tabla DimGeography --
+
 FROM 
-  [AdventureWorksDW2019].[dbo].[DimProduct] as p 
-  LEFT JOIN dbo.DimProductSubcategory as ps on ps.ProductSubcategoryKey = p.ProductSubcategoryKey 
-  LEFT JOIN dbo.DimProductCategory as pc on ps.ProductCategoryKey = pc.ProductCategoryKey 
+  [AdventureWorksDW2019].[dbo].[DimCustomer] as c 
+  LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
 ORDER BY 
-  p.ProductKey ASC
+  CustomerKey ASC 
+  
+  -- Ordené la lista de forma ascendente --
+
 ```
 
 ## FACT_SALES
