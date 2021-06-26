@@ -35,6 +35,37 @@ Además, armé un presupuesto de ventas en Excel y la conecté en el modelo de d
 
 A continuación se muestran las instrucciones SQL para limpiar y transformar los datos necesarios.
 
+
+## DIM_CALENDAR
+
+```
+--Cleansed DIM_DATE table
+SELECT 
+  [DateKey], 
+  [FullDateAlternateKey] AS DATE, 
+  --,[DayNumberOfWeek]
+  [EnglishDayNameOfWeek] AS DAY, 
+  -- ,[SpanishDayNameOfWeek]
+  -- ,[FrenchDayNameOfWeek]
+  --,[DayNumberOfMonth]
+  -- ,[DayNumberOfYear]
+  [WeekNumberOfYear] AS WEEKNO, 
+  [EnglishMonthName] AS MONTH, 
+  LEFT([EnglishMonthName], 3) AS MONTHSHORT, 
+  -- ,[SpanishMonthName]
+  -- ,[FrenchMonthName]
+  [MonthNumberOfYear] AS MONTHNO, 
+  [CalendarQuarter] AS QUARTER, 
+  [CalendarYear] AS YEAR -- ,[CalendarSemester]
+  --,[FiscalQuarter]
+  -- ,[FiscalYear]
+  -- ,[FiscalSemester]
+FROM 
+  [AdventureWorksDW2019].[dbo].[DimDate] 
+WHERE 
+  CalendarYear >= 2019
+```
+
 imagen
 
 
