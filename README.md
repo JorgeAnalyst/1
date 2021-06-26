@@ -33,7 +33,7 @@ Para realizar el análisis y satisfacer las necesidades comerciales definidas en
 
 A continuación se muestra el resultado final (antes y después del procedimiento) de las queries en SQL: 
 
-## ANTES (Sin modificar)
+### Antes (Ejemplo sin modificar)
 
 ```
 /****** Script for SelectTopNRows command from SSMS  ******/
@@ -59,7 +59,8 @@ SELECT TOP (1000) [DateKey]
   FROM [AdventureWorksDW2019].[dbo].[DimDate]
 ```
 
-## DESPUÉS (Datos filtrados, limpiados, y ordenados)
+### Después (Datos filtrados, limpiados, y ordenados)
+## FECHA
 
 ```
 --Tabla de Calendario limpiada (DIM_DateTable)-- 
@@ -90,6 +91,9 @@ WHERE
   CalendarYear >= 2019  --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
 
 ```
+Las siguientes tablas quedaron finalmente configuradas de esta forma:
+
+
 ## CLIENTES
 
 ```
@@ -136,44 +140,55 @@ ORDER BY
 
 ```
 
-## FACT_SALES
-
+## PRODUCTO
 ```
--- Cleansed FACT_SALES table
+-->Tabla de Producto limpiada 
 SELECT 
-  [ProductKey], 
-  [OrderDateKey], 
-  [DueDateKey], 
-  [ShipDateKey], 
-  [CustomerKey] -- ,[PromotionKey]
-  -- ,[CurrencyKey]
-  -- ,[SalesTerritoryKey]
-  , 
-  [SalesOrderNumber] -- ,[SalesOrderLineNumber]
-  -- ,[RevisionNumber]
-  -- ,[OrderQuantity]
-  -- ,[UnitPrice]
-  -- ,[ExtendedAmount]
-  -- ,[UnitPriceDiscountPct]
-  -- ,[DiscountAmount]
-  -- ,[ProductStandardCost]
-  -- ,[TotalProductCost]
-  , 
-  [SalesAmount] -- ,[TaxAmt]
-  -- ,[Freight]
-  -- ,[CarrierTrackingNumber]
-  -- ,[CustomerPONumber]
-  -- ,[OrderDate]
-  -- ,[DueDate]
-  -- ,[ShipDate]
+  p.[ProductKey], 
+  p.[ProductAlternateKey] AS Código, 
+  --,[ProductSubcategoryKey],
+  --,[WeightUnitMeasureCode]
+  --,[SizeUnitMeasureCode]
+  --,[EnglishProductName]
+  p.[SpanishProductName] AS Nombre, 
+  ps.SpanishProductSubcategoryName AS [Sub Categoría],  -->Se unió desde la tabla de Sub Categoría
+  pc.SpanishProductCategoryName AS Categoría,  -->Se unió dese la tabla de Categoría
+  --,[FrenchProductName]
+  --,[StandardCost]
+  --,[FinishedGoodsFlag]
+  p.[Color] AS Color, 
+  --,[SafetyStockLevel]
+  --,[ReorderPoint]
+  --,[ListPrice]
+  p.[Size] AS Tamaño, 
+  --,[SizeRange]
+  --,[Weight]
+  --,[DaysToManufacture]
+  p.[ProductLine] AS [Linea del Producto], 
+  --,[DealerPrice]
+  --,[Class]
+  --,[Style]
+  p.[ModelName] AS [Nombre del Modelo], 
+  --,[LargePhoto]
+  p.[EnglishDescription] AS [Descripcion del Producto], 
+  --,[FrenchDescription]
+  --,[ChineseDescription]
+  --,[ArabicDescription]
+  --,[HebrewDescription]
+  --,[ThaiDescription]
+  --,[GermanDescription]
+  --,[JapaneseDescription]
+  --,[TurkishDescription]
+  --,[StartDate]
+  --,[EndDate]
+  ISNULL (p.Status, 'Agotado') AS [Estado Actual] --> Se designó el estado 'Agotado´ Si no se encuentra disponible
 FROM 
-  [AdventureWorksDW2019].[dbo].[FactInternetSales] 
-WHERE 
-  LEFT(OrderDateKey, 4) >= YEAR(
-    GETDATE()
-  ) -2 --make sure there is always 2 years gap from the report. 
-ORDER BY 
-  OrderDateKey ASC
+  [AdventureWorksDW2019].[dbo].[DimProduct] AS p 
+  LEFT JOIN dbo.DimProductSubcategory AS ps ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey 
+  LEFT JOIN dbo.DimProductCategory AS pc ON ps.ProductCategoryKey = pc.ProductCategoryKey 
+order by 
+  p.ProductKey asc
+
 ```
 
 
