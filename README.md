@@ -35,10 +35,10 @@ Para realizar el análisis y satisfacer las necesidades comerciales definidas en
 
 A continuación se muestra el resultado final (antes y después del procedimiento) de las queries en SQL: 
 
-#### Ejemplo: Tabla Fecha requerida, sin modificar
+### Ejemplo
 
 ```
--- Ejemplo --
+-- Ejemplo: Tabla Fecha requerida, sin modificar --
 SELECT TOP (1000) [DateKey]
       ,[FullDateAlternateKey]
       ,[DayNumberOfWeek]
@@ -60,6 +60,7 @@ SELECT TOP (1000) [DateKey]
       ,[FiscalSemester]
   FROM [AdventureWorksDW2019].[dbo].[DimDate]
 ```
+
 
 ## Resultados (Datos filtrados, limpiados, y ordenados): 
 
