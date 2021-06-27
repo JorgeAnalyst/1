@@ -235,9 +235,9 @@ ORDER BY
 
 
 <h2 align="center">Paso 3: Modelamiento de datos</h2>
-A continuación, se muestra una captura de pantalla del modelo de datos después de que las tablas fuesen limpiadas y preparadas. Se implementaron en Power BI.
+En esta fase, cargé los datos a Power BI y creé un modelodespués de que las tablas fuesen limpiadas y preparadas. 
 
-Este modelo de datos también muestra cómo se ha conectado FACT_Budget a FACT_InternetSales y otras tablas DIM necesarias.
+Este modelo de datos también muestra cómo se ha conectado el presupuesto junto a las tablas DIM a la tabla FACT (Ventas por Internet).
 
 imagen
 
