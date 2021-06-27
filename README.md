@@ -239,7 +239,7 @@ En esta fase, cargé los datos a Power BI y creé un modelodespués de que las t
 
 Este modelo de datos también muestra cómo se ha conectado el presupuesto junto a las tablas DIM a la tabla FACT (Ventas por Internet).
 
-![](/imagen/Modelo Tablas Power BI.PNG)
+![](/imagen/Modelo.JPG)
 
 
 
