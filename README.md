@@ -237,7 +237,7 @@ ORDER BY
 <h2 align="center">Paso 3: Modelamiento de datos</h2>
 En esta fase, cargé los datos a Power BI y elaboré un modelo después de que las tablas fuesen limpiadas y preparadas. 
 
-Este modelo de datos también muestra cómo se ha conectado el Presupuesto junto a la tabla de Fecha, y las tablas DIM a la tabla Ventas por Internet.
+Este modelo de datos muestra cómo se ha conectado la tabla Fecha al presupuesto, y las tablas DIM a la tabla Ventas por Internet.
 
 ![](/imagen/Modelo.JPG)
 
