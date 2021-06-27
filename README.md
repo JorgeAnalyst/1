@@ -35,7 +35,7 @@ Para realizar el análisis y satisfacer las necesidades comerciales definidas en
 
 A continuación se muestra el resultado final (antes y después del procedimiento) de las queries en SQL: 
 
-#### Ejempllo (tabla requerida sin modificar)
+#### Ejemplo: Tabla Fecha requerida, sin modificar
 
 ```
 -- Ejemplo --
@@ -61,9 +61,9 @@ SELECT TOP (1000) [DateKey]
   FROM [AdventureWorksDW2019].[dbo].[DimDate]
 ```
 
-#### Resultados: Datos filtrados, limpiados, y ordenados
+## Resultados (Datos filtrados, limpiados, y ordenados): 
 
-## Fecha
+### Fecha
 
 ```
 -- Resultado tabla DIM Fecha limpiada -- 
@@ -94,10 +94,8 @@ WHERE
   CalendarYear >= 2019  --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
 
 ```
-Las tablas requeridas quedaron finalmente configuradas de la siguiente forma:
 
-
-## Clientes
+### Clientes
 
 ```
 -- Resultado tabla DIM Clientes limpiada --
@@ -143,7 +141,7 @@ ORDER BY
 
 ```
 
-## Producto
+### Producto
 ```
 -- Resultado tabla DIM Producto limpiada --
 SELECT 
@@ -194,7 +192,7 @@ order by
 
 ```
 
-## Ventas por Internet 
+### Ventas por Internet 
 ```
 -- Resultado tabla FACT Ventas por Internet limpiada --
 SELECT 
