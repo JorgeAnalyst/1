@@ -64,10 +64,10 @@ SELECT TOP (1000) [DateKey]
 
 ## Resultados (Datos filtrados, limpiados, y ordenados): 
 
-### Fecha
+### Fechas
 
 ```
--- Resultado tabla DIM Fecha limpiada -- 
+-- Resultado tabla DIM Fechas limpiada -- 
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Fecha, 
