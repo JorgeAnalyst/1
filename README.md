@@ -38,7 +38,7 @@ A continuación se muestra el resultado final (antes y después del procedimient
 ### Ejemplo
 
 ```
--- Ejemplo: Tabla Fecha requerida, sin modificar --
+-- Ejemplo: Tabla DIM Fecha requerida, sin modificar --
 SELECT TOP (1000) [DateKey]
       ,[FullDateAlternateKey]
       ,[DayNumberOfWeek]
