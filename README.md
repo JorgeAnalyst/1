@@ -35,7 +35,7 @@ Para realizar el análisis y satisfacer las necesidades comerciales definidas en
 
 A continuación se muestra el resultado final (antes y después del procedimiento) de las queries en SQL: 
 
-### Antes (Ejemplo sin modificar)
+#### Ejempllo (tabla requerida sin modificar)
 
 ```
 -- Ejemplo --
@@ -61,7 +61,7 @@ SELECT TOP (1000) [DateKey]
   FROM [AdventureWorksDW2019].[dbo].[DimDate]
 ```
 
-### Después (Datos filtrados, limpiados, y ordenados)
+#### Resultados: Datos filtrados, limpiados, y ordenados
 
 ## Fecha
 
@@ -94,7 +94,7 @@ WHERE
   CalendarYear >= 2019  --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
 
 ```
-Las siguientes tablas quedaron finalmente configuradas de la siguiente forma:
+Las tablas requeridas quedaron finalmente configuradas de la siguiente forma:
 
 
 ## Clientes
