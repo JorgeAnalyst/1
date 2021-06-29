@@ -249,8 +249,7 @@ Finalmente, en la siguiente imagen evidencio el resultado final:
 Finalmente, en las siguientes imágenes se evidencia el resultado final, un dashboard de ventas completo con una página que funciona como panel y una descripción general, además de una hoja con información de los clientes enfocadas en obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos. 
 
 ![](/imagen/Ventas1.JPG)
-![](/imagen/Ventas2.JPG)
-![](/imagen/Clientes1.JPG)
+
 ![](/imagen/Clientes2.JPG)
 
 Si te interesa conocer e interactuar con el dashboard, puedes hacer click en el siguiente enlace:
