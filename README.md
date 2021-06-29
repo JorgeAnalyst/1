@@ -23,10 +23,10 @@ Luego, en base a la solicitud que se hizo desde la empresa, definí las historia
 
 | N#             | Cargo                       | Requerimiento                                                      | Objetivo                                                              | Criterio de Aceptación                                      |
 |     :---:      |     :---:                   |     :---:                                                          |     :---:                                                             |     :---:                                                   |
-| 1              | Gerente de ventas           | Dashboard global de ventas                                       | Hacer un mejor seguimiento de los clientes y productos más rentables| Dashboard en Power BI con los indicadores más importantes del el área|
-| 2              | Ejecutivo de ventas 1       | Descripción detallada de ventas por cliente                        | Hacer seguimiento a los clientes que compran más                      | Dashboard en Power BI que permita filtrar datos por cliente | 
+| 1              | Gerente de ventas           | Dashboard global de ventas                                       | Hacer un mejor seguimiento de los clientes y productos que generan mayores utilidades| Dashboard en Power BI con los indicadores más importantes del el área|
+| 2              | Ejecutivo de ventas 1       | Descripción detallada de ventas por cliente y sus características                       | Hacer seguimiento a los clientes que compran más y sus respectivos atributos                      | Dashboard en Power BI que permita filtrar datos por cliente | 
 | 3              | Ejecutivo de ventas 2       | Descripción detallada de ventas por producto                       | Hacer seguimiento a los productos que más se venden| Dashboard en Power BI que permita filtrar datos por producto|
-| 4              | Ejecutivo de ventas 3       | Descripción detalllada de ventas por internet                      | Hacer seguimiento de las ventas y costos                         | Dashboard en Power BI con gráficos interactivos e indicadores |
+| 4              | Ejecutivo de ventas 3       | Descripción de las tiendas que más venden en el año                       | Hacer seguimiento de las ventas y costos                         | Dashboard en Power BI con gráficos interactivos e indicadores |
 
 
 
