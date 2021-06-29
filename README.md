@@ -223,6 +223,6 @@ Finalmente, en las siguientes imágenes se evidencia el resultado final, un dash
 
 ![](/imagen/Clientes3.JPG)
 
-Si estás interesado en conocer e interactuar con el dashboard, puedes hacer click en el siguiente enlace:
+*Si estás interesado en conocer e interactuar con el dashboard, te invito a hacer click en el siguiente enlace:*
 https://app.powerbi.com/groups/me/reports/0468830c-240c-406c-96e4-6cc4051261d9?ctid=6a6202fc-b14f-49a0-97e8-9f47d94fca85&pbi_source=linkShare
 
