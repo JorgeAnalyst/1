@@ -33,41 +33,11 @@ Luego, en base a la solicitud que se hizo desde la empresa, definí las historia
 <h2 align="center">Paso 2: Limpieza y transformación de datos en SQL</h2>
 Para realizar el análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, primero importé las tablas mediante SQL las cuales limpié, ordené, y transforme en formato.csv, esto con la finalidad de adquirir sólo los datos que efectivamente necesito para cumplir el objetivo de una forma limpia y ordenada.
 
-A continuación se muestra el resultado final (antes y después del procedimiento) de las queries en SQL: 
-
-### Ejemplo
-
-```
--- Ejemplo: Tabla DIM Fecha requerida, sin modificar --
-SELECT TOP (1000) [DateKey]
-      ,[FullDateAlternateKey]
-      ,[DayNumberOfWeek]
-      ,[EnglishDayNameOfWeek]
-      ,[SpanishDayNameOfWeek]
-      ,[FrenchDayNameOfWeek]
-      ,[DayNumberOfMonth]
-      ,[DayNumberOfYear]
-      ,[WeekNumberOfYear]
-      ,[EnglishMonthName]
-      ,[SpanishMonthName]
-      ,[FrenchMonthName]
-      ,[MonthNumberOfYear]
-      ,[CalendarQuarter]
-      ,[CalendarYear]
-      ,[CalendarSemester]
-      ,[FiscalQuarter]
-      ,[FiscalYear]
-      ,[FiscalSemester]
-  FROM [AdventureWorksDW2019].[dbo].[DimDate]
-```
-
-
-## Resultados (Datos filtrados, limpiados, y ordenados): 
 
 ### Fechas
 
 ```
--- Resultado tabla DIM Fechas limpiada -- 
+-- Resultado tabla DIM Fechas trabajada -- 
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Fecha, 
@@ -80,7 +50,7 @@ SELECT
   [WeekNumberOfYear] AS NrSemana, 
   --,[EnglishMonthName]
   [SpanishMonthName] AS Mes, 
-LEFT([SpanishMonthName], 3) as MesCorto,  --> Acorté las tres primeras letras el nombre del mes para que al visualizarse se vea más representativo y limpio
+LEFT([SpanishMonthName], 3) as MesCorto,  
   --,[FrenchMonthName]  
   [MonthNumberOfYear] AS NrMes, 
   --,[CalendarQuarter]
@@ -92,14 +62,14 @@ LEFT([SpanishMonthName], 3) as MesCorto,  --> Acorté las tres primeras letras e
 FROM 
   [AdventureWorksDW2019].[dbo].[DimDate] 
 WHERE 
-  CalendarYear >= 2019  --> Elegí sólo los años 2019 en adelante, ya que la base de datos contenía datos demasiado antiguos
+  CalendarYear >= 2019  
 
 ```
 
 ### Clientes
 
 ```
--- Resultado tabla DIM Clientes limpiada --
+-- Resultado tabla DIM Clientes trabajada --
 SELECT 
   c.customerkey AS CustomerKey, 
   --,[GeographyKey]
@@ -108,7 +78,7 @@ SELECT
   c.firstname AS Nombre, 
   --,[MiddleName]
   c.lastname AS Apellido, 
-  c.firstname + ' ' + lastname AS [NombreCompleto], --> Concatené Nombre y Apellido
+  c.firstname + ' ' + lastname AS [Nombre Completo], 
   --,[NameStyle]
   --,[BirthDate]
   --,[MaritalStatus]
@@ -132,19 +102,19 @@ CASE c.gender WHEN 'M' THEN 'Hombre' WHEN 'F' THEN 'Mujer' END AS Género,
   --,[Phone]
   c.DateFirstPurchase AS PrimeraCompra, 
   --,[CommuteDistance]
-  g.city AS Ciudad  --> Vinculé la Ciudad del cliente con la tabla DimGeography
+  g.city AS Ciudad 
 FROM 
   [AdventureWorksDW2019].[dbo].[DimCustomer] as c 
-  LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
+LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
 ORDER BY 
-  CustomerKey ASC  --> Ordené la lista de forma ascendente
+  CustomerKey ASC  
 
 
 ```
 
-### Producto
+### Productos
 ```
--- Resultado tabla DIM Producto limpiada --
+-- Resultado tabla DIM Productos trabajada --
 SELECT 
   p.[ProductKey], 
   p.[ProductAlternateKey] AS Código, 
@@ -153,8 +123,8 @@ SELECT
   --,[SizeUnitMeasureCode]
   --,[EnglishProductName]
   p.[SpanishProductName] AS Nombre, 
-  ps.SpanishProductSubcategoryName AS [Sub Categoría],  -->Se unió desde la tabla de Sub Categoría
-  pc.SpanishProductCategoryName AS Categoría,  -->Se unió dese la tabla de Categoría
+  ps.SpanishProductSubcategoryName AS [Sub Categoría], 
+  pc.SpanishProductCategoryName AS Categoría,  
   --,[FrenchProductName]
   --,[StandardCost]
   --,[FinishedGoodsFlag]
@@ -183,7 +153,7 @@ SELECT
   --,[TurkishDescription]
   --,[StartDate]
   --,[EndDate]
-  ISNULL (p.Status, 'Agotado') AS [Estado Actual] --> Se designó el estado 'Agotado´ Si no se encuentra disponible
+  ISNULL (p.Status, 'Agotado') AS [Estado Actual] 
 FROM 
   [AdventureWorksDW2019].[dbo].[DimProduct] AS p 
   LEFT JOIN dbo.DimProductSubcategory AS ps ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey 
@@ -193,9 +163,9 @@ order by
 
 ```
 
-### Ventas por Internet 
+### Ventas
 ```
--- Resultado tabla FACT Ventas por Internet limpiada --
+-- Resultado tabla FACT Ventas trabajada --
 SELECT 
   [ProductKey], 
   [OrderDateKey], 
@@ -215,7 +185,8 @@ SELECT
   --,[DiscountAmount]
   --,[ProductStandardCost]
   --,[TotalProductCost]
-  [SalesAmount] --,[TaxAmt]
+  [SalesAmount] 
+  --,[TaxAmt]
   --,[Freight]
   --,[CarrierTrackingNumber]
   --,[CustomerPONumber]
@@ -225,7 +196,7 @@ SELECT
 FROM 
   [AdventureWorksDW2019].[dbo].[FactInternetSales] 
 WHERE 
-  LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) -2 --> Se asegura que siempre se obtenga información de los últimos dos años a contar del año actual
+  LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) -2
 ORDER BY 
   OrderDateKey ASC
 
