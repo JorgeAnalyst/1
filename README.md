@@ -246,7 +246,7 @@ Este modelo de datos muestra cómo se ha conectado la tabla Fecha al presupuesto
 <h2 align="center">Paso 4: Dashboard de ventas</h2>
 Finalmente, en la siguiente imagen evidencio el resultado final: 
 
-Un dashboard de ventas completo con una página que funciona como panel y una descripción general, con otras dos páginas enfocadas en combinar tablas para obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos.
+Finalmente, en las siguientes imágenes se evidencia el resultado final, un dashboard de ventas completo con una página que funciona como panel y una descripción general, además de una hoja con información de los clientes enfocadas en obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos. 
 
 ![](/imagen/Ventas1.JPG)
 ![](/imagen/Ventas2.JPG)
