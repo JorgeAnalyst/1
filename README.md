@@ -248,6 +248,8 @@ Finalmente, en la siguiente imagen evidencio el resultado final:
 
 Un dashboard de ventas completo con una página que funciona como panel y una descripción general, con otras dos páginas enfocadas en combinar tablas para obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos.
 
-imagen
-
+![](/imagen/Ventas1.JPG)
+![](/imagen/Ventas2.JPG)
+![](/imagen/Clientes1.JPG)
+![](/imagen/Clientes2.JPG)
 
