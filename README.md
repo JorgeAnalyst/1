@@ -3,10 +3,12 @@
 
 #### Descripción del proyecto:
 - Utilicé una base de datos preexistente de Microsoft (AdventureWorks Sample Databases)
-- Simulé una solicitud comercial con la finalidad de generar un informe de ventas ejecutivo. Definí las historias de usuarios (user stories) para cumplir con los - requerimientos y garantizar que los criterios de aceptación se mantuviesen durante todo el proyecto.
-- Creé el modelo de datos necesario para realizar análisis y satisfacer las necesidades comerciales definidas en las user stories.
+- Simulé una solicitud comercial con la finalidad de generar un informe de ventas integral. 
+- Definí las historias de usuarios (user stories) para cumplir con los requerimientos y garantizar que los criterios de aceptación se mantuviesen durante todo el proyecto.
+- Creé el modelo de datos necesario para realizar análisis y satisfacer las necesidades comerciales requeridas.
 - Limpié y preparé los datos necesarios.
-- Finalmente, confeccioné el dashboard de ventas en Power BI con visualizaciones claras para mostrar las ventas a lo largo del tiempo, por clientes y por productos.
+- Confeccioné el dashboard en Power BI con foco en las ventas y clientes.
+
 
 #### Recursos utilizados
 - Base de datos: https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak
