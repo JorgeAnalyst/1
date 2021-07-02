@@ -219,10 +219,10 @@ Este modelo de datos muestra cómo se ha conectado la tabla Fecha al presupuesto
 
 Finalmente, en las siguientes imágenes se evidencia el resultado final, un dashboard de ventas completo con una página que funciona como panel y una descripción general, además de una hoja con información de los clientes enfocadas en obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos. 
 
-![](/imagen/Ventas1.JPG)
+![](/imagen/Dashboard1.JPG)
 
-![](/imagen/Clientes3.JPG)
+![](/imagen/Dashboard2.JPG)
 
 *Si estás interesado en conocer e interactuar con el dashboard, te invito a hacer click en el siguiente enlace:*
-https://app.powerbi.com/groups/me/reports/0468830c-240c-406c-96e4-6cc4051261d9?ctid=6a6202fc-b14f-49a0-97e8-9f47d94fca85&pbi_source=linkShare
+https://app.powerbi.com/groups/me/reports/137bf6a5-cdee-4db6-a7a6-a66424487c45?ctid=6a6202fc-b14f-49a0-97e8-9f47d94fca85&pbi_source=linkShare
 
