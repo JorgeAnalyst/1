@@ -210,7 +210,7 @@ ORDER BY
 <h2 align="center">Paso 3: Modelamiento de datos</h2>
 En esta fase, cargé los datos a Power BI y elaboré un modelo después de que las tablas fuesen limpiadas y preparadas. 
 
-Este modelo de datos muestra cómo se ha conectado la tabla Fecha al presupuesto, y las tablas DIM a la tabla Ventas por Internet.
+Este modelo de datos muestra cómo se han vinculado las tablas DIM a las tablas FACT (Ventas)
 
 ![](/imagen/Modelo.JPG)
 
@@ -219,7 +219,8 @@ Este modelo de datos muestra cómo se ha conectado la tabla Fecha al presupuesto
 <h2 align="center">Paso 4: Dashboard de ventas</h2>
 
 
-Finalmente, en las siguientes imágenes se evidencia el resultado final, un dashboard de ventas completo con una página que funciona como panel y una descripción general, además de una hoja con información de los clientes enfocadas en obtener los detalles y visualizaciones necesarias para mostrar las ventas a lo largo del tiempo, por clientes y por productos. 
+Finalmente, en las siguientes imágenes se evidencia el resultado final, un dashboard de ventas completo con filtros específicos y acceso a fechas de forma rápida e intuitiva. Abordando de forma visualmente efectiva los requerimientos de la gerencia. 
+Además, una hoja con información detallada de nuestros mejores clientes e información de segmentación de mercado para la toma de decisiones.
 
 ![](/imagen/Dashboard1.JPG)
 
