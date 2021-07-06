@@ -19,9 +19,9 @@
 <h2 align="center">Paso 1: Requerimientos del negocio</h2>
 
 
-En primer lugar recopilo y estandarizo la solicitud recibida por el gerente de ventas y defino exactamente la información que necesita cada personal dentro del área. 
+En primer lugar recopilé y estandaricé la solicitud recibida por el gerente de ventas y definí exactamente la información que necesita cada personal dentro del área. 
 
-Luego, en base a la solicitud que se hizo desde la empresa, definí las historias de usuarios para lograr un marco bien definido y así cumplir con la entrega y garantizar que los criterios de aceptación se mantengan durante todo el proyecto.
+Luego, en base a la solicitud que se hizo desde la empresa, definí las historias de usuarios para lograr un marco bien definido y así cumplir con la entrega y garantizar que los criterios de aceptación se mantuviesen durante todo el proyecto.
 
 | N#             | Cargo                       | Requerimiento                                                      | Objetivo                                                              | Criterio de Aceptación                                      |
 |     :---:      |     :---:                   |     :---:                                                          |     :---:                                                             |     :---:                                                   |
@@ -33,7 +33,7 @@ Luego, en base a la solicitud que se hizo desde la empresa, definí las historia
 
 
 <h2 align="center">Paso 2: Limpieza y transformación de datos en SQL</h2>
-Para realizar el análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, primero importé las tablas mediante SQL las cuales limpié, ordené, y transforme en formato.csv, esto con la finalidad de adquirir sólo los datos que efectivamente necesito para cumplir el objetivo de una forma limpia y ordenada.
+Para realizar el análisis y satisfacer las necesidades comerciales definidas en los requerimientos de trabajo, primero importé las tablas mediante SQL las cuales limpié, ordené, y transformé en formato .csv, esto con la finalidad de adquirir sólo los datos que efectivamente necesito para cumplir con el objetivo de una forma limpia y ordenada.
 
 
 ### Fechas
