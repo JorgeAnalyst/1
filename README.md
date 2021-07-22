@@ -227,5 +227,6 @@ Además, una hoja con información detallada de nuestros mejores clientes e info
 ![](/imagen/Dashboard2.JPG)
 
 *Si estás interesado en conocer e interactuar con el dashboard, te invito a hacer click en el siguiente enlace:*
+
 https://app.powerbi.com/groups/me/reports/137bf6a5-cdee-4db6-a7a6-a66424487c45?ctid=6a6202fc-b14f-49a0-97e8-9f47d94fca85&pbi_source=linkShare
 
